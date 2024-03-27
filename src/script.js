@@ -29,6 +29,12 @@ quoteInputElement.addEventListener('input', () => {
     if (correct) handleWin();
 });
 
+quoteInputElement.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+    }
+});
+
 function getRandomQuote() {
     return fetch(RANDOM_QUOTE_API_URL)
         .then(response => response.json())
