@@ -2,6 +2,8 @@
 
 This project is a typing speed test web application where users can practice typing and measure their typing speed.
 
+[Play it here](https://kosa12.github.io/typingSpeedGame)
+
 ## Used languages
 
 ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
