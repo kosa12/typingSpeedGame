@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-container">
+            <div class="timer" id="quoteTimer"></div>
+            <div class="wpm" id="wpm"></div>
+        </div>
+        <div class="quote-display" id="quoteDisplay"></div>
+        <div class="timer" id="countdownTimer"></div>
+        <script>
+            window.onload = function() {
+                startCountdown();
+            };
+        </script>
+        <textarea id="quoteInput" class="quote-input" autofocus></textarea>
+        <div class="button-container">
+            <button id="nextQuoteBtn" class="hidden button_top"><span>Next Quote</span></button>
+        </div>
+
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Statistics</h2>
+            <p id="statistics"></p>
+        </div>
+    </div>
+</body>
+</html>
