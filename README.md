@@ -63,4 +63,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, you can reach out to the project maintainer at example@email.com.
+If you have any questions, suggestions, or feedback, you can reach out to the project maintainer at kosa03matyas@gmail.com.
