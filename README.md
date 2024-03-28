@@ -47,7 +47,8 @@ No installation is required. Simply open the web application in your web browser
 
 ## Screenshots
 
-[img]()
+![img](https://github.com/kosa12/typingSpeedGame/blob/main/screenshots/1.png)
+![img2](https://github.com/kosa12/typingSpeedGame/blob/main/screenshots/2.png)
 
 ## Contributing
 
