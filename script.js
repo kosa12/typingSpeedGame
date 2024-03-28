@@ -1,9 +1,11 @@
-const RANDOM_QUOTE_API_URL = 'http://api.quotable.io/random';
+const RANDOM_QUOTE_API_URL = 'https://api.quotable.io/random';
 const quoteDisplayElement = document.getElementById('quoteDisplay');
 const quoteInputElement = document.getElementById('quoteInput');
 const wpmElement = document.getElementById('wpm');
 const quoteTimerElement = document.getElementById('quoteTimer');
 const countdownTimerElement = document.getElementById('countdownTimer');
+
+let isCountdownRunning = false;
 
 quoteInputElement.addEventListener('input', () => {
     const arrayQuote = quoteDisplayElement.querySelectorAll('span');
@@ -27,6 +29,35 @@ quoteInputElement.addEventListener('input', () => {
     });
 
     if (correct) handleWin();
+});
+
+document.querySelector('.keyboard').addEventListener('click', (event) => {
+    if (event.target.matches('.keyboard li')) {
+        const button = event.target;
+        console.log(`Button clicked: ${button.innerText}`);
+        const key = button.innerText;
+        const event = new KeyboardEvent('keydown', {
+            key: key
+        });
+        document.dispatchEvent(event);
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (isCountdownRunning) {
+        event.preventDefault();
+        return;
+    }
+
+    console.log('Keydown event:', event.key);
+    const keyPressed = event.key;
+    const keyElement = document.getElementById(keyPressed);
+    if (keyElement) {
+        keyElement.classList.add('pressed');
+        setTimeout(() => {
+            keyElement.classList.remove('pressed');
+        }, 100);
+    }
 });
 
 quoteInputElement.addEventListener('keydown', (event) => {
@@ -59,6 +90,8 @@ function getTimerTime() {
 }
 
 function startCountdown() {
+
+    isCountdownRunning = true;
     let count = 3;
     countdownTimerElement.innerText = count;
     countdownTimerElement.style.visibility = 'visible';
@@ -66,6 +99,7 @@ function startCountdown() {
         count--;
         countdownTimerElement.innerText = count;
         if (count === 0) {
+            isCountdownRunning = false;
             wpmElement.style.visibility = 'visible';
             quoteTimerElement.style.visibility = 'visible';
             clearInterval(countdownInterval);
@@ -100,6 +134,7 @@ function closePopup() {
 
 let highScore = localStorage.getItem('highScore') || 0;
 function handleWin() {
+    
     const elapsedTime = getTimerTime();
     const wordCount = quoteInputElement.value.trim().split(/\s+/).length;
     const wpm = Math.round((wordCount / elapsedTime) * 60);

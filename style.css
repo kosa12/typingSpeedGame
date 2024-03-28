@@ -6,9 +6,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height:  100vh;
-    margin: 0;
-    background-color: blueviolet;
+    min-height: 100vh;
+    margin: -5rem;
+    background-color: #FBF3D5;
 }
 
 body, .quote-input{
@@ -16,7 +16,7 @@ body, .quote-input{
 }
 
 .container{
-    background-color: rgb(249, 179, 3);
+    background-color: #EFBC9B;
     padding: 1rem;
     border-radius: 1rem;
     width: 1000px;
@@ -29,7 +29,7 @@ body, .quote-input{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    color: rgb(249, 179, 3);
+    color: #EFBC9B;
     font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ body, .quote-input{
     top: 2rem;
     right: 2rem;
     font-size: 2rem;
-    color: white;
+    color: #EFBC9B;
 }
 
 
@@ -56,7 +56,7 @@ body, .quote-input{
 .quote-input{
     color: black;
     background-color: transparent;
-    border: 2.5px solid rgb(167, 125, 25);
+    border: 2.5px solid #a48069;
     outline: none;
     width: 100%;
     height: 8rem;
@@ -73,11 +73,11 @@ body, .quote-input{
 }
 
 .correct {
-    color: green;
+    color: rgba(0, 128, 0, 0.725);
 }
 
 .incorrect {
-    color: red;
+    color: rgba(248, 23, 23, 0.661);
     text-decoration: underline;
 }
 
@@ -97,7 +97,7 @@ body, .quote-input{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(223, 180, 79);
+    background-color: #FBF3D5;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -126,11 +126,12 @@ body, .quote-input{
 
 button {
   --button_radius: 1em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #000000;
+  --button_color: #FBF3D5;
+  --button_outline_color: #578377;
   font-size: 17px;
   font-weight: bold;
   border: none;
+  margin-top: 10px;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
   padding: 20px;
@@ -156,4 +157,108 @@ button:hover{
 
 button:active{
   transform: translateY(0);
+}
+
+.row {
+    list-style: none;
+    display: flex;
+    margin: 0.1rem;
+    padding: 0;
+}
+
+.keyboard {
+    margin: -5rem;
+    margin-left: calc(1rem + 2px);
+    margin-right: calc(1rem + 2px);
+    position: absolute;
+    top: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#Tab {
+    width: 6rem;
+}
+
+#CapsLock {
+    width: 7rem;
+}
+
+#Shift {
+    width: 9rem;
+}
+
+#Enter {
+    width: 7rem;
+}
+
+
+#Backspace {
+    width: 7rem;
+}
+
+
+li {
+    color: #000000;
+    height: 3em;
+    width: 3em;
+    border-radius: 0.4em;
+    margin-top: 0em;
+    margin-left: 0.5em;
+    line-height: 3em;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1em;
+}
+
+.pinky {
+    color: #000000;
+    background-color: #9B4444;
+    border: 2px solid #582424;
+}
+
+.ring {
+    color: #000000;
+    background-color: #EFBC9B;
+    border: 2px solid #ad7e5e;
+}
+
+.middle {
+    color: #000000;
+    background-color: #9CAFAA;
+    border: 2px solid #637f78;
+}
+
+.pointer1st {
+    color: #000000;
+    background-color: #D6DAC8;
+    border: 2px solid #757e55;
+}
+
+.pointer2nd {
+    color: #000000;
+    background-color: #F6F193;
+    border: 2px solid #98943c;
+}
+
+.space {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    background-color: #F6F193;
+    border: 2px solid #98943c;
+}
+
+
+.row-4 {
+    justify-content: center;
+}
+
+.pressed {
+    background-color: #ffffff;
+    transform: scale(1.2);
 }
