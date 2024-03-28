@@ -6,8 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: -5rem;
+    min-height: 80vh;
     background-color: #FBF3D5;
 }
 
@@ -16,56 +15,57 @@ body, .quote-input{
 }
 
 .container{
+    margin-top: -5rem;
     background-color: #EFBC9B;
     padding: 1rem;
     border-radius: 1rem;
-    width: 1000px;
-    max-width: 90%;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
 }
 
 .timer {
     position: absolute;
-    top: 2rem;
+    top: 2vw;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
+    font-size: 3vw;
     color: #EFBC9B;
     font-weight: bold;
 }
 
-
 .wpm {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 2rem;
+    top: 2vw;
+    right: 2vw;
+    font-size: 3vw;
     color: #EFBC9B;
 }
 
 
 .quote-display {
     color: black;
-    margin-bottom: 1rem;
+    margin-bottom: 1vw;
     margin-left: calc(1rem + 2px);
     margin-right: calc(1rem + 2px);
     user-select: none;
-    font-size: 30px;
+    font-size: 1.5vw;
     font-weight: bold;
 }
 
 .quote-input{
     color: black;
     background-color: transparent;
-    border: 2.5px solid #a48069;
+    border: 0.2vw solid #a48069;
     outline: none;
     width: 100%;
-    height: 8rem;
+    height: 8vw;
     margin: auto;
     resize: none;
-    padding: .5rem 1rem;
-    font-size: 1rem;
-    border-radius: 1rem;
-    font-size: 20px;
+    padding: .5vw 1vw;
+    border-radius: 1vw;
+    font-size: 1.2vw;
 }
 
 .quote-input:hover {
@@ -98,17 +98,17 @@ body, .quote-input{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FBF3D5;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 2vw;
+    border-radius: 1vw;
     text-align: center;
 }
 
 .popup-content .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1vw;
+    right: 1vw;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 2vw;
     color: #888;
 }
 
@@ -120,7 +120,7 @@ body, .quote-input{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 1vw;
 }
 
 
@@ -131,7 +131,7 @@ button {
   font-size: 17px;
   font-weight: bold;
   border: none;
-  margin-top: 10px;
+  margin-top: 1rem;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);
   padding: 20px;
@@ -162,85 +162,83 @@ button:active{
 .row {
     list-style: none;
     display: flex;
-    margin: 0.1rem;
+    margin: 0.1vw;
     padding: 0;
 }
 
 .keyboard {
-    margin: -5rem;
-    margin-left: calc(1rem + 2px);
-    margin-right: calc(1rem + 2px);
+    margin-top: 1rem;
+    margin: 0vw;
+    margin-left: auto;
+    margin-right: auto;
+    top: calc(58% + 1rem);
     position: absolute;
-    top: 70%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.5vw;
 }
 
 #Tab {
-    width: 6rem;
+    width: 6vw;
 }
 
 #CapsLock {
-    width: 7rem;
+    width: 7vw;
 }
 
 #Shift {
-    width: 9rem;
+    width: 9vw;
 }
 
 #Enter {
-    width: 7rem;
+    width: 7vw;
 }
-
 
 #Backspace {
-    width: 7rem;
+    width: 7vw;
 }
-
 
 li {
     color: #000000;
-    height: 3em;
-    width: 3em;
+    height: 3vw;
+    width: 3vw;
     border-radius: 0.4em;
-    margin-top: 0em;
-    margin-left: 0.5em;
-    line-height: 3em;
+    margin-left: 0.5vw;
+    line-height: 3vw;
     letter-spacing: 1px;
     transition: 0.3s;
     text-align: center;
-    font-size: 1em;
+    font-size: 1vw;
 }
 
 .pinky {
     color: #000000;
     background-color: #9B4444;
-    border: 2px solid #582424;
+    border: 0.2vw solid #582424;
 }
 
 .ring {
     color: #000000;
     background-color: #EFBC9B;
-    border: 2px solid #ad7e5e;
+    border: 0.2vw solid #ad7e5e;
 }
 
 .middle {
     color: #000000;
     background-color: #9CAFAA;
-    border: 2px solid #637f78;
+    border: 0.2vw solid #637f78;
 }
 
 .pointer1st {
     color: #000000;
     background-color: #D6DAC8;
-    border: 2px solid #757e55;
+    border: 0.2vw solid #757e55;
 }
 
 .pointer2nd {
     color: #000000;
     background-color: #F6F193;
-    border: 2px solid #98943c;
+    border: 0.2vw solid #98943c;
 }
 
 .space {
@@ -250,9 +248,8 @@ li {
     align-items: center;
     color: #000000;
     background-color: #F6F193;
-    border: 2px solid #98943c;
+    border: 0.2vw solid #98943c;
 }
-
 
 .row-4 {
     justify-content: center;
