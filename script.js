@@ -90,7 +90,6 @@ function getTimerTime() {
 }
 
 function startCountdown() {
-
     isCountdownRunning = true;
     let count = 3;
     countdownTimerElement.innerText = count;
