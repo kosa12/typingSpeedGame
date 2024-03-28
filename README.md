@@ -45,6 +45,10 @@ No installation is required. Simply open the web application in your web browser
 4. Once you finish typing, your WPM (words per minute) will be calculated automatically.
 5. You can practice as many times as you like to improve your typing speed and accuracy.
 
+## Screenshots
+
+[img]()
+
 ## Contributing
 
 If you would like to contribute to the Typing Speed Test project, you can follow these steps:
