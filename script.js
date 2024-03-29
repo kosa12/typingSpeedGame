@@ -94,6 +94,7 @@ function startCountdown() {
     let count = 3;
     countdownTimerElement.innerText = count;
     countdownTimerElement.style.visibility = 'visible';
+    renderNewQuote();
     const countdownInterval = setInterval(() => {
         count--;
         countdownTimerElement.innerText = count;
@@ -110,7 +111,6 @@ function startCountdown() {
 
 function startNewQuote() {
     document.getElementById('nextQuoteBtn').classList.add('hidden');
-    renderNewQuote();
     startTime = new Date();
     quoteTimerElement.innerText = 0;
     setInterval(() => {
